@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/tbarbg" >
+
+        <!-- 显示左边框按钮 -->
+
+        <ImageButton
+            android:id="@+id/showLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="36dp"
+            android:background="@drawable/bg_radiobtn_normal"
+            android:src="@drawable/lostitle" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/logo" />
+
+        <!-- 显示右边框按钮 -->
+
+        <ImageButton
+            android:id="@+id/showRight"
+            android:layout_width="46dip"
+            android:layout_height="43dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bg_radiobtn_normal"
+            android:src="@drawable/more" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/bg" >
+            
+            <!-- 栏目：时事聚焦-->            
+            <RelativeLayout style="@style/news_brand_layout"
+                android:id="@+id/ssjj_news">
+                <TextView style="@style/news_brand_name"
+                    android:text="@string/shishijujiao"/>
+            </RelativeLayout>
+			
+            <!-- 栏目：投资快讯 -->
+            <RelativeLayout style="@style/news_brand_layout"
+                android:id="@+id/id_investment_news">
+                <TextView style="@style/news_brand_name"
+                    android:text="@string/touzikuaixun_text"/>
+            </RelativeLayout>
+
+            <!-- 栏目：今日快讯 -->
+            <RelativeLayout style="@style/news_brand_layout"
+                android:id="@+id/id_today_news">
+                <TextView style="@style/news_brand_name"
+                    android:text="@string/jinrikuaibao_text"/>
+            </RelativeLayout>
+
+			<!-- 栏目：美图在线 -->            
+            <RelativeLayout style="@style/news_brand_layout"
+                android:id="@+id/id_meitu_news">
+                <TextView style="@style/news_brand_name"
+                    android:text="@string/meituzaixian_text"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#AAAAAA" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/background" >
+        
+        <!-- 时事聚焦列表 -->
+        <Investmentletters.android.view.RefreshListView
+            android:id="@+id/ssjj_news_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/background"
+            android:cacheColorHint="@color/transparent"
+            android:dividerHeight="0dp"
+            android:footerDividersEnabled="true"
+            android:listSelector="@color/background" />
+
+        <!-- 投资快讯列表 -->
+
+        <Investmentletters.android.view.RefreshListView
+            android:id="@+id/id_investment_news_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/background"
+            android:cacheColorHint="@color/transparent"
+            android:dividerHeight="0dp"
+            android:footerDividersEnabled="true"
+            android:listSelector="@color/background"
+            android:visibility="gone" />
+
+        <!-- 今日快讯列表 -->
+
+        <Investmentletters.android.view.RefreshListView
+            android:id="@+id/id_today_news_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/background"
+            android:cacheColorHint="@color/transparent"
+            android:dividerHeight="0dp"
+            android:footerDividersEnabled="true"
+            android:listSelector="@color/background"
+            android:visibility="gone" />
+        
+        <!-- 美图列表 -->
+        <Investmentletters.android.view.RefreshListView
+            android:id="@+id/id_meitu_news_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@color/background"
+            android:dividerHeight="0dp"
+            android:listSelector="@color/background"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

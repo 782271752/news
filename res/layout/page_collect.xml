@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <!-- 模拟标题栏 -->
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/tbarbg" >
+        
+        <!-- 功能标题 -->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/collect_title"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <!-- 编编、完成按钮-->
+        <ImageView
+              android:id="@+id/edit_or_finish"
+              android:layout_width="60dp"
+              android:layout_height="40dp"
+              android:padding="5dp"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="5dp"
+              android:scaleType="fitXY"
+              android:src="@drawable/btn_edit" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"
+        android:background="@drawable/bg"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <!-- 功能界面切换栏 -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <!-- 文章 -->
+
+            <RelativeLayout
+                android:id="@+id/collect_article"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_radiobtn_press" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/collect_article"
+                    android:textSize="@dimen/fifteen_size" />
+            </RelativeLayout>
+
+            <!-- 图片 -->
+
+            <RelativeLayout
+                android:id="@+id/collect_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/collect_Picture"
+                    android:textSize="@dimen/fifteen_size" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+	
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        
+         <!-- 操作按扭 -->
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="40dp"
+	        android:orientation="horizontal"
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginBottom="5dp"
+	        android:layout_marginTop="5dp"
+	        android:visibility="gone"
+	        android:id="@+id/control_bar">
+	        <!-- 删除所选 -->
+	        <Button 
+	            android:layout_width="10dp"
+	            android:layout_height="fill_parent"
+	            android:layout_marginLeft="5dp"
+	            android:layout_marginRight="5dp"
+	            android:layout_weight="1"
+	            android:text="删除所选"
+	            android:id="@+id/del_select"/>
+	        
+	        <!-- 清空全部 -->
+	        <Button 
+	            android:layout_width="10dp"
+	            android:layout_height="fill_parent"
+	            android:layout_marginLeft="5dp"
+	            android:layout_marginRight="5dp"
+	            android:layout_weight="1"
+	            android:text="清空全部"
+	            android:id="@+id/del_all"/>
+	    </LinearLayout>
+        
+         <!-- 文章列表 -->
+	    <Investmentletters.android.view.RefreshListView
+	        android:id="@+id/article_list"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:background="@color/background"
+	        android:cacheColorHint="@color/transparent"
+	        android:dividerHeight="0dp"
+	        android:footerDividersEnabled="true"
+	        android:listSelector="@color/background"
+	        android:layout_above="@id/control_bar"
+	        android:fadingEdge="none" />
+	
+	    <!-- 美图列表 -->
+	    <Investmentletters.android.view.RefreshListView
+	        android:id="@+id/image_list"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:divider="@color/background"
+	        android:dividerHeight="0dp"
+	        android:listSelector="@color/background"
+	        android:visibility="gone"
+	        android:layout_above="@id/article_list"
+	        android:fadingEdge="none" />
+    </RelativeLayout>
+    
+</LinearLayout>

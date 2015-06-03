@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eceeef"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/feedback_head"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="3dp"
+            android:gravity="right"
+            android:text="5/6"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:text="4.您感觉软件操作如何"
+            android:textSize="16sp" />
+    </LinearLayout>
+    
+     <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp" >
+
+            <RadioButton
+                android:id="@+id/radio50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提示太多，容易干扰" />
+
+            <RadioButton
+                android:id="@+id/radio51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="界面不好看" />
+
+            <RadioButton
+                android:id="@+id/radio52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="软件反应慢" />
+
+            <RadioButton
+                android:id="@+id/radio53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="功能太复杂，不太容易上手" />
+
+            <RadioButton
+                android:id="@+id/radio54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="内容不够吸引" />
+        </RadioGroup>
+    </ScrollView>
+
+</LinearLayout>

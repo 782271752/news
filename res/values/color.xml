@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="background">#f0f0f0</color>
+    <color name="simiple_button_color">#FFF</color>
+    <color name="link_color">#FF0066CC</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="button_right">#FFFFFF</color>
+    <color name="news_show_summary_textcolor">#808080</color>
+    <color name="red">#ff0000</color>
+
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mlist"
+    android:layout_width="180dp"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="40dip"
+        android:background="@drawable/left1" />
+
+    <ListView
+        android:id="@+id/id_today_news_program_name_listview"
+        android:layout_width="180dp"
+        android:layout_height="fill_parent"
+        android:background="@android:color/black"
+        android:divider="@android:color/black"
+        android:fadeScrollbars="false"
+        android:fadingEdge="none"
+        android:listSelector="#000000" >
+    </ListView>
+
+</LinearLayout>

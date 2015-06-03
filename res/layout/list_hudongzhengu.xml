@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#ECEEEF" >
+    <!-- 标题栏 -->
+	 <RelativeLayout
+	        android:id="@+id/layout_top"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dip"
+	        android:background="@drawable/tbarbg" >
+	
+	     <!-- 显示左边 -->
+	
+	        <!-- logo -->
+	        <ImageView
+	            android:id="@+id/imageView1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="30dip"
+	            android:layout_centerVertical="true"
+	            android:layout_centerHorizontal="true"
+	            android:src="@drawable/logo" />
+	
+	        <!-- 显示右边 -->
+	        <ImageButton
+	            android:id="@+id/showRight"
+	            android:layout_width="46dip"
+	            android:layout_height="43dip"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:background="@drawable/bg_radiobtn_normal"
+	            android:src="@drawable/more"
+	            android:layout_marginRight="5dp" />
+	
+	 </RelativeLayout>
+	 
+	 <!-- 下面内容框 -->
+	 <LinearLayout 
+	     android:layout_width="fill_parent"
+	     android:layout_height="fill_parent"
+	     android:orientation="vertical">
+	     
+	     <!-- 搜索框 -->
+	     <EditText 
+	         android:layout_width="fill_parent"
+	         android:layout_height="45dp"
+	         android:layout_marginTop="3dp"
+	         android:layout_marginLeft="5dp"
+	         android:layout_marginRight="5dp"
+	         android:textColor="#000"
+	         android:hint="请输入新闻关键词"
+	         android:background="@drawable/bg_input"
+	         
+	         android:id="@+id/search"/>
+	     
+	     <!-- 热门股票列表 -->
+	     <ListView 
+	         android:layout_width="fill_parent"
+	         android:layout_height="fill_parent"
+	         android:fadingEdge="none"
+	         android:dividerHeight="0dp"
+	         android:divider="#ECEEEF"
+	         android:id="@+id/hot_share_list"/>
+	     
+	     <!-- 关键词查询股票列表 -->
+	     <ListView 
+	         android:layout_width="fill_parent"
+	         android:layout_height="fill_parent"
+	         android:fastScrollEnabled="true"
+	         android:fadingEdge="none"
+	         android:visibility="gone" 
+	         android:id="@+id/search_share_list"/>
+	     
+	  </LinearLayout>
+
+</LinearLayout>

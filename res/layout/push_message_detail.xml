@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F0F0F0" >
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_title"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_news_show_top" >
+
+            <!-- 按钮:返回 -->
+
+            <ImageView
+                android:id="@+id/id_news_show_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_content_back" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_comment_count"
+                android:gravity="center_vertical|right"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/twenty_five_size" />
+        </RelativeLayout>
+
+        <!-- 分隔线 -->
+
+        <TextView
+            android:id="@+id/sperator_one"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#e3e3e3" />
+
+        <!-- 分隔线 -->
+
+        <TextView
+            android:id="@+id/sperator_two"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ffffff" />
+    </LinearLayout>
+
+    <!-- 新闻内容-->
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/layout_bottom"
+	    android:layout_below="@+id/layout_title">
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_margin="3dp">
+	        <!-- 标题 -->
+	
+	        <TextView
+	            android:id="@+id/title"
+	            android:layout_width="fill_parent"
+	            android:gravity="center"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:layout_marginRight="10dp"
+	            android:layout_marginTop="10dp"
+	            android:textColor="#000"
+	            android:textSize="@dimen/twenty_three" />
+	        
+	        <!-- 时间 -->
+	        <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:textColor="#9c9c9c"
+	                android:layout_marginTop="3dp"
+	                android:layout_marginLeft="10dp"
+	                android:id="@+id/time" />
+	        
+	        <!-- 有视频播放 -->
+	        <RelativeLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="150dp"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginRight="20dp"
+	            android:background="#000"
+	            android:visibility="gone"
+	            android:id="@+id/video">
+				
+	            <ImageView 
+	                android:layout_width="60dp"
+	                android:layout_height="60dp"
+	                android:src="@drawable/radio_play"
+	                android:scaleType="fitXY"
+	                android:layout_centerInParent="true"/>
+	            
+	        </RelativeLayout>
+	        
+			<!-- 具体新闻-->
+		    <WebView
+			      android:id="@+id/content"
+			      android:layout_width="fill_parent"
+			      android:layout_height="fill_parent"
+			      android:layout_marginTop="3dp"/>            
+	        
+	    </LinearLayout>
+    </ScrollView>
+    
+
+    <!-- 底部按钮布局 -->
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_news_show_bottom"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <!-- 按钮:评论 -->
+		<RelativeLayout style="@style/news_detail_contaler">
+		    <ImageView style="@style/news_detail_btn"
+	            android:id="@+id/id_comment_btn"
+	            android:src="@drawable/btn_comment"/>
+		</RelativeLayout>
+		
+		 <!-- 按钮:分享 -->
+		<RelativeLayout style="@style/news_detail_contaler">
+	        <ImageView style="@style/news_detail_btn"
+	            android:id="@+id/id_share_btn"
+	            android:src="@drawable/btn_share"/>
+		</RelativeLayout>
+		
+		<!-- 按钮:改变字体大小 -->
+		<RelativeLayout style="@style/news_detail_contaler">
+		    <ImageView style="@style/news_detail_btn"
+		            android:id="@+id/id_change_textsize_btn"
+		            android:src="@drawable/btn_change_textsize"/>
+		</RelativeLayout>
+        
+		<!-- 按钮:收藏 -->
+		<RelativeLayout style="@style/news_detail_contaler">
+		    <ImageView style="@style/news_detail_btn"
+	            android:id="@+id/id_collect_btn"
+	            android:src="@drawable/btn_collect"/>
+		</RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

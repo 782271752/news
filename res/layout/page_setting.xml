@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_login"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/tbarbg" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/setting_title"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/showRight"
+            android:layout_width="46dip"
+            android:layout_height="43dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bg_radiobtn_normal"
+            android:src="@drawable/more" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/off_line"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/txtbg"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dip"
+                android:text="离线加载"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/clean_cache"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/txtbg"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dip"
+                android:text="清理缓存"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/ceckbg"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dip"
+                android:text="个人收藏"
+                android:textSize="16sp" />
+            <Button
+                android:id="@+id/preserve_article"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/txtbg"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="16sp"
+                android:text="文章"
+                android:textSize="16dip" />
+
+            <Button
+                android:id="@+id/preserve_img"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/txtbg"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dip"
+                android:text="图片"
+                android:textSize="16sp" />
+            
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/ceckbg"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dip"
+                android:text="推送设置"
+                android:textSize="16sp" />
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/push_settting_frame" >
+                <Button
+                    android:id="@+id/button51"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/ceckbg"
+                    android:clickable="false"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dip"
+                    android:text="是否开启推送服务"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/button51"
+                    android:layout_marginRight="14dp"
+                    android:gravity="right" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/txtbg"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dip"
+                android:text="意见反馈"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/txtbg"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dip"
+                android:text="关于"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

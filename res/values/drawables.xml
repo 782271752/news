@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="transparent" type="drawable">#00000000</item>
+    <item name="setting_item_btn_ini" type="drawable">#333333</item>
+    <item name="setting_item_btn_press" type="drawable">#0469b2</item>
+    <item name="bg_black" type="drawable">#111111</item>
+    <item name="bg_transparent" type="drawable">#20000000</item>
+    <item name="subpart_bg_bule" type="drawable">#0c6da7</item>
+	<item name="bg_first_login_radiobutton" type="drawable">#686868</item>
+  
+</resources>

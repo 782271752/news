@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    
+     <!-- 收藏夹美图在线列表adapter项 -->
+     
+    <!-- 自定义复选框 -->
+    <Investmentletters.android.view.PreserveCheckBox 
+         android:layout_width="25dp"
+         android:layout_height="25dp"
+         android:layout_marginRight="5dp"
+         android:layout_marginLeft="5dp"
+         android:layout_marginTop="85dp"
+         android:id="@+id/check_box"/>
+    
+    <RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="20dp"
+	    android:orientation="vertical">
+	    <!-- 后面的空框 -->
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="195dp"
+	        android:layout_marginTop="3dp"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:background="#DDD">
+	        <LinearLayout 
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:layout_margin="1dp"
+	            android:background="#FFF"
+	            android:orientation="vertical">
+	            <ImageView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="150dp"
+	                android:layout_margin="10dp"/>
+	            <TextView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+	                android:background="#EEE"/>
+	        </LinearLayout>
+	    </LinearLayout>
+	    
+	    <!-- 有图和文字的框 -->
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="195dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="12dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:background="#DDD">
+	        <LinearLayout 
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:layout_margin="1dp"
+	            android:background="#FFF"
+	            android:orientation="vertical">
+			
+	            <!-- 图片 -->
+	            <ImageView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="150dp"
+	                android:layout_margin="2dp"
+	                android:scaleType="fitXY"
+	                android:src="@drawable/bg_listitem_big"
+	                android:id="@+id/img"/>
+	           
+	            <!-- 分隔线 -->
+	            <LinearLayout 
+	                android:layout_width="fill_parent"
+	                android:layout_height="1dp"
+	                android:background="#DDD"/>
+	            
+	            <!-- 标题 -->
+	            <TextView 
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+	                android:gravity="center_vertical"
+	                android:textSize="18sp"
+	                android:background="#EEE"
+	                android:singleLine="true"
+	                android:paddingLeft="7dp"
+	                android:id="@+id/title"/>
+	        </LinearLayout>
+	    </LinearLayout>
+	    
+	</RelativeLayout>
+	    
+    
+</LinearLayout>

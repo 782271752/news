@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/tbarbg" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/logo" />
+
+            <ImageButton
+                android:id="@+id/showRight"
+                android:layout_width="46dip"
+                android:layout_height="43dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/bg_radiobtn_normal"
+                android:src="@drawable/more" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"
+        android:background="@drawable/bg"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/id_lei_da_layout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/company_radar_text"
+                    android:textSize="@dimen/fifteen_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_jie_ma_layout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/data_decode_text"
+                    android:textSize="@dimen/fifteen_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_can_pan_layout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/stock_operation_unscramble"
+                    android:textSize="@dimen/fifteen_size" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!-- 公司雷达列表 -->
+
+        <Investmentletters.android.view.RefreshListView
+            android:id="@+id/id_lei_da_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background"
+            android:cacheColorHint="@color/transparent"
+            android:dividerHeight="0dp"
+            android:footerDividersEnabled="true"
+            android:listSelector="@color/background"
+            android:visibility="visible" />
+
+        <!-- 数据解码列表 -->
+
+        <Investmentletters.android.view.RefreshListView
+            android:id="@+id/id_jie_ma_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background"
+            android:cacheColorHint="@color/transparent"
+            android:dividerHeight="0dp"
+            android:footerDividersEnabled="true"
+            android:listSelector="@color/background"
+            android:visibility="gone" />
+
+        <!-- 操盘解读列表 -->
+
+        <Investmentletters.android.view.RefreshListView
+            android:id="@+id/id_can_pan_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background"
+            android:cacheColorHint="@color/transparent"
+            android:dividerHeight="0dp"
+            android:footerDividersEnabled="true"
+            android:listSelector="@color/background"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

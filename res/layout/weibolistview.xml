@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ede8e7" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10dip"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+
+        <ListView
+            android:id="@+id/weibo_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:divider="@android:color/black"
+            android:fadeScrollbars="false"
+            android:fadingEdge="none"
+            android:listSelector="#000000" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="分享到"
+        android:textSize="@dimen/twenty_size" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/background" />
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/id_weixin_share_btn"
+            android:layout_width="70dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/transparent"
+            android:drawableTop="@drawable/btn_share_weixin"
+            android:text="@string/weixin" />
+
+        <Button
+            android:id="@+id/id_sina_weibo_share_btn"
+            android:layout_width="70dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/transparent"
+            android:drawableTop="@drawable/btn_share_sina_weibo"
+            android:text="@string/sina_weibo" />
+
+        <Button
+            android:id="@+id/id_tencent_weibo_share_btn"
+            android:layout_width="70dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/transparent"
+            android:drawableTop="@drawable/btn_share_tencent_weibo"
+            android:text="@string/t_weibo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/id_weixin_friends_share_btn"
+            android:layout_width="70dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/transparent"
+            android:drawableTop="@drawable/btn_share_weixin_friends"
+            android:text="@string/weinxin_friends" />
+    </LinearLayout>
+
+</LinearLayout>

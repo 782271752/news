@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/tbarbg" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/logo" />
+
+            <ImageButton
+                android:id="@+id/showRight"
+                android:layout_width="46dip"
+                android:layout_height="43dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/bg_radiobtn_normal"
+                android:src="@drawable/more" />
+        </RelativeLayout>
+
+        <!-- 播放界面 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="140dip"
+            android:background="@drawable/broadcast_bg"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="#00000000" >
+
+                <ImageView
+                    android:id="@+id/head1"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/ic_radio_dj" />
+
+                <!-- 状态提示 -->
+
+                <TextView
+                    android:id="@+id/dj_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dip"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:textColor="#ffffff"
+                    android:text="黄进"
+                    android:textSize="16dip" />
+
+                <Button
+                    android:id="@+id/detailed"
+                    android:layout_width="80dip"
+                    android:layout_height="35dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="14dp"
+                    android:text="详细" />
+
+                <TextView
+                    android:id="@+id/tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#F00"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/palyer_control"
+                android:layout_width="fill_parent"
+                android:layout_height="38dip"
+                android:layout_gravity="bottom"
+                android:background="#77000000" >
+
+                <ImageView
+                    android:id="@+id/play"
+                    android:layout_width="35dip"
+                    android:layout_height="35dip"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/radio_play" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:background="#e0e0e0"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="节目清单"
+            android:textSize="17sp" />
+
+        <ListView
+            android:id="@+id/radio_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@color/background"
+            android:dividerHeight="0dp"
+            android:fadingEdge="none"
+            android:listSelector="@color/background" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

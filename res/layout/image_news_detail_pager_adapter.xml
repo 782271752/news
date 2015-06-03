@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <!-- 美图在线详细列表项 -->
+    
+     <!-- 内容 -->
+    <TextView
+        android:id="@+id/content"
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:textColor="#FFF"
+        android:textSize="12sp" />
+
+    <!-- 图片 -->
+    <Investmentletters.android.view.ScaleImageView
+        android:id="@+id/img"
+        android:layout_above="@id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_listitem_big" />
+    
+
+</RelativeLayout>

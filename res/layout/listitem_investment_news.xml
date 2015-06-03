@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/new_item_bg"
+    android:orientation="vertical" >
+
+    <!-- 分隔线 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@android:color/white" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" >
+
+        <!-- 缩略图 -->
+
+        <Investmentletters.android.view.MyImageView
+            android:id="@+id/id_thumbnail_img"
+            android:layout_width="78dp"
+            android:layout_height="63dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_toRightOf="@+id/id_thumbnail_img"
+            android:orientation="vertical" >
+
+            <!-- 标题 -->
+
+            <TextView
+                android:id="@+id/id_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+            <!-- 内容提要 -->
+
+            <TextView
+                android:id="@+id/id_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@color/news_show_summary_textcolor"
+                android:textSize="@dimen/news_show_summary_textsize" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 分隔线 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#E4E4E4" />
+
+</LinearLayout>

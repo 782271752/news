@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/tbarbg" >
+
+        <!-- 显示右边 -->
+        <ImageButton
+            android:id="@+id/showRight"
+            android:layout_width="46dip"
+            android:layout_height="43dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bg_radiobtn_normal"
+            android:src="@drawable/more" />
+
+        <!-- 标题 -->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="消息记录"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    
+    <!-- 时事聚焦列表 -->
+    <Investmentletters.android.view.RefreshListView
+         android:id="@+id/listview"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:background="@color/background"
+         android:cacheColorHint="@color/transparent"
+         android:dividerHeight="0dp"
+         android:footerDividersEnabled="true"
+         android:listSelector="@color/background" />
+
+    
+</LinearLayout>

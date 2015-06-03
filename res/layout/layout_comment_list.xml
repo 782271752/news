@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F0F0F0" >
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_news_show_top" >
+
+            <!-- 按钮:返回 -->
+
+            <ImageView
+                android:id="@+id/id_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingLeft="10dp"
+                android:src="@drawable/btn_content_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="查看评论"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twenty_three" />
+        </RelativeLayout>
+
+        <!-- 分隔线 -->
+
+        <TextView
+            android:id="@+id/sperator_one"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#e3e3e3" />
+
+        <!-- 分隔线 -->
+
+        <TextView
+            android:id="@+id/sperator_two"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ffffff" />
+    </LinearLayout>
+
+    <Investmentletters.android.view.RefreshListView
+        android:id="@+id/id_comment_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layout_title"
+        android:cacheColorHint="@color/transparent"
+        android:dividerHeight="0dp" >
+    </Investmentletters.android.view.RefreshListView>
+
+    <!-- 回复布局 -->
+
+    <LinearLayout
+        android:id="@+id/reply_comment_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="请填写您的评论"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fifteen_size" />
+
+            <Button
+                android:id="@+id/id_submit_reply_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_submit_comment" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/id_reply_comment_edittext"
+            android:layout_width="fill_parent"
+            android:layout_height="90dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_submit_comment_layout"
+            android:gravity="top|left"
+            android:padding="5dp" />
+    </LinearLayout>
+    
+    <!-- 评论布局 -->
+
+    <LinearLayout
+        android:id="@+id/comment_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="请填写您的评论"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fifteen_size" />
+
+            <Button
+                android:id="@+id/id_submit_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_submit_comment" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/id_comment_edittext"
+            android:layout_width="fill_parent"
+            android:layout_height="90dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_submit_comment_layout"
+            android:gravity="top|left"
+            android:padding="5dp" />
+    </LinearLayout>
+
+</RelativeLayout>

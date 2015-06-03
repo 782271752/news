@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="title_text_size">30dp</dimen>
+    <dimen name="twenty_five_size">25dp</dimen>
+    <dimen name="twenty_size">20dp</dimen>
+	<dimen name="fifteen_size">15dp</dimen>
+	<dimen name="fourteen_size">16dp</dimen>
+	<dimen name="twenty_three">23sp</dimen>
+	<dimen name="news_show_summary_textsize">14sp</dimen>
+</resources>

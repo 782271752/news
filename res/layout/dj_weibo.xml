@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/tbarbg" >
+
+        <!-- 按钮:返回 -->
+
+        <ImageView
+            android:id="@+id/id_news_show_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingLeft="10dp"
+            android:src="@drawable/btn_weibo_back" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/logo" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/weibo_account"
+        android:layout_width="fill_parent"
+        android:layout_height="120dip"
+        android:background="@drawable/dj_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="49dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dip"
+                android:src="@drawable/ic_radio_dj" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text="用户名(id)"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/id_btn_follow"
+                android:layout_width="90dip"
+                android:layout_height="40dip"
+                android:layout_marginLeft="50dp"
+                android:layout_gravity="bottom"
+                android:text="关注" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:shadowColor="#000000"
+            android:shadowDx="2"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:text="他的说说"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_weibolist"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

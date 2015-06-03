@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#ECEEEF" >
+    <!-- 互动诊股详细界面 -->
+    
+    <!-- 标题栏 -->
+	 <RelativeLayout
+	        android:id="@+id/layout_top"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dip"
+	        android:background="@drawable/tbarbg" >
+	
+	     	<!-- 返回按钮 -->
+	     	<RelativeLayout 
+	     	    android:layout_width="70dp"
+	     	    android:layout_height="fill_parent"
+	     	    android:id="@+id/back">
+				<ImageView
+	                android:layout_width="40dp"
+	                android:layout_height="23dp"
+	                android:layout_centerInParent="true"
+	                android:scaleType="fitXY"
+	                android:src="@drawable/btn_img_back" />	     	    
+	     	</RelativeLayout>
+	
+	        <!-- logo -->
+	        <ImageView
+	            android:id="@+id/imageView1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="30dip"
+	            android:layout_centerVertical="true"
+	            android:layout_centerHorizontal="true"
+	            android:src="@drawable/logo" />
+	
+	 </RelativeLayout>
+	 
+	 <ScrollView 
+	     android:layout_width="fill_parent"
+	     android:layout_height="fill_parent">
+	     
+	     <!-- 下面内容框 -->
+		 <LinearLayout 
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:orientation="vertical">
+		     
+		     <!-- 股票名称 -->
+		     <RelativeLayout 
+		         android:layout_width="fill_parent"
+		         android:layout_height="50dp"
+		         android:layout_marginTop="5dp"
+		         android:layout_marginLeft="7dp"
+		         android:layout_marginRight="7dp"
+		         android:background="@drawable/bg_share_detail_title">
+		         <TextView 
+		             android:layout_width="wrap_content"
+		             android:layout_height="wrap_content"
+		             android:singleLine="true"
+		             android:layout_centerVertical="true"
+		             android:layout_marginLeft="45dp"
+		             android:textSize="19sp"
+		             android:textColor="#000"
+		             android:id="@+id/name"/>
+		     </RelativeLayout>
+		     
+		     <!-- 基本面 -->
+		     <TextView 
+		         android:layout_width="wrap_content"
+		         android:layout_height="wrap_content"
+		         android:textColor="#000"
+		         android:textSize="16sp"
+		         android:layout_marginTop="20dp"
+		         android:layout_marginLeft="13dp"
+		         android:text="基本面:"/>
+		     
+		     <!-- 基本面详细信息 -->
+		     <TextView 
+		         android:layout_width="fill_parent"
+		         android:layout_height="wrap_content"
+		         android:textColor="#636363"
+		         android:textSize="14sp"
+		         android:layout_marginTop="15dp"
+		         android:layout_marginLeft="13dp"
+		         android:layout_marginRight="13dp"
+		         android:id="@+id/desc"/>
+		     
+		     <!-- 责任声明 -->
+		     <LinearLayout 
+		         android:layout_width="fill_parent"
+		         android:layout_height="wrap_content"
+		         android:layout_marginTop="12dp"
+		         android:layout_marginLeft="15dp"
+		         android:layout_marginRight="15dp"
+		         android:background="#fb8080">
+		         <LinearLayout 
+		             android:layout_width="fill_parent"
+		             android:layout_height="fill_parent"
+		             android:layout_margin="1px"
+		             android:background="#ffd7d7">
+		             <ImageView 
+		                 android:layout_width="15dp"
+		                 android:layout_height="15dp"
+		                 android:src="@drawable/ic_warning"
+		                 android:layout_marginTop="1dp"
+		                 android:layout_marginLeft="1dp"
+		                 android:layout_marginRight="1dp"/>
+		             <TextView 
+		                 android:layout_width="wrap_content"
+		                 android:layout_height="wrap_content"
+		                 android:textColor="#636363"
+		         		 android:textSize="14sp"
+		         		 android:autoLink="phone"
+		         		 android:text="测试结果不能保证其内容的真实性，完整性，及时性，不做任何保证或承诺，据此操作，风险自负！详情可致电越声理财，咨询热线：400-668-0739"/>
+		             
+		             
+		             
+		         </LinearLayout>
+		     </LinearLayout>
+		     
+		     <!-- 区域 -->
+		     <LinearLayout
+		         android:layout_width="fill_parent"
+		         android:layout_height="120dp"
+		         android:layout_marginTop="12dp"
+		         android:layout_marginLeft="15dp"
+		         android:layout_marginRight="15dp"
+		         android:background="#e9e9e9">
+		         <LinearLayout 
+		             android:layout_width="fill_parent"
+		             android:layout_height="fill_parent"
+		             android:layout_margin="1dp"
+		             android:background="#FFF"
+		             android:orientation="vertical">
+		             	<!-- 投资区域 -->
+		             	<TextView 
+		             	    android:layout_width="wrap_content"
+		             	    android:layout_height="wrap_content"
+		             	    android:textColor="#000"
+		             	    android:textSize="16sp"
+		             	    android:layout_marginTop="5dp"
+		             	    android:layout_marginLeft="10dp"
+		             	    android:text="投资区域:"/>
+			             <LinearLayout 
+				             android:layout_width="fill_parent"
+				             android:layout_height="20dp"
+				             android:layout_marginTop="15dp"
+				             android:layout_marginLeft="10dp"
+				             android:layout_marginRight="10dp"
+				             android:id="@+id/direction_layout">
+				             <ImageView 
+				                 android:layout_width="20dp"
+				                 android:layout_height="20dp"
+				                 android:src="@drawable/triangle"
+				                 android:id="@+id/direction"/>
+				         </LinearLayout>
+				         
+				         <!-- 区域基准标尺 -->
+				         <ImageView 
+				             android:layout_width="fill_parent"
+				             android:layout_height="30dp"
+				             android:layout_marginLeft="10dp"
+				             android:layout_marginRight="10dp"
+				             android:scaleType="fitXY"
+				             android:src="@drawable/share_detail_area_ruler"/>
+		         </LinearLayout>
+		     </LinearLayout>
+		     
+		  </LinearLayout>
+	     
+	 </ScrollView>
+
+</LinearLayout>
